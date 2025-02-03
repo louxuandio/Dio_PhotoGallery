@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -44,7 +43,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.res.painterResource
-
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.background
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
+import com.example.diosphotogallery.R
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,17 +78,22 @@ class MainActivity : ComponentActivity() {
                     Row (
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ){
-                        /*
-                        Image(
-                            painter = painterResource(id = R.drawable.nanjing),
-                            contentDescription = "Nanjing Image",
+
+                        Box(
                             modifier = Modifier
-                                .size(300.dp)
-                                .padding(top = 8.dp)
-                                //.align(Alignment.TopStart)
-                        )
-                        //put two photos in a line
-                         */
+                                .wrapContentSize()
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.nanjing),
+                                contentDescription = "Food Image",
+                                modifier = Modifier
+                                    .size(300.dp)
+                                    .padding(top = 8.dp)
+                                    .align(Alignment.TopStart)
+                            )
+                            
+                        }
+
 
                     }
                     Row {
