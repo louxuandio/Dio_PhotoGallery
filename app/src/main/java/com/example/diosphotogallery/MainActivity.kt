@@ -23,20 +23,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.diosphotogallery.ui.theme.DiosPhotoGalleryTheme
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Card
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.compose.material.icons.Icons
-import androidx.compose.material3.Icon
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.material3.HorizontalDivider
-import androidx.compose.ui.res.painterResource
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.background
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
-import com.example.diosphotogallery.R
+//I asked ChatGPT about what do I need to import
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +45,7 @@ class MainActivity : ComponentActivity() {
                         style = TextStyle(
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Bold))
+                    //ChatGPT helps me with this HorizontalDivider
                     HorizontalDivider(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -72,6 +62,7 @@ class MainActivity : ComponentActivity() {
                                     .wrapContentSize()
                             ) {
                                 Image(
+                                    //I struggled a lot with import pics into drawable, and I solved that with the help of ChatGPT
                                     painter = painterResource(id = R.drawable.nanjing),
                                     contentDescription = "Nanjing Image",
                                     modifier = Modifier
